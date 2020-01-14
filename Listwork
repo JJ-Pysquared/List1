@@ -1,0 +1,19 @@
+import numpy as np
+import pandas as pd
+import math
+
+csv= pd.read_csv("List.csv")
+df=pd.DataFrame(csv)
+
+lst=[]
+var=0
+
+for x in df['df1']:
+    if math.isnan(x):        
+        value=df['df2'][var]
+        lst.append(value)
+    else:
+        lst.append(x)
+    var+=1
+
+print(lst)
